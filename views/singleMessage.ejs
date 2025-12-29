@@ -1,15 +1,12 @@
-
 <html>
-	<head> 
+	<head>
+		
 	</head>
+	
 	<body>
-		<%messages.forEach((item)=>{%>
-			<ul>
+        <ul>
 				<li>
-					<a href="/<%= item.id %>">
-						<%=item.text%>
-					</a>
-					
+					<%=item.text%>
                 </li>
 
                 <li>
@@ -20,10 +17,7 @@
                     <%=item.added%>
                 </li>
 				
-			</ul>
-            <%});%>
+		</ul>
+		
 	</body>
-	
 </html>
-
- 

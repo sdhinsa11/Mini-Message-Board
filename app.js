@@ -22,9 +22,10 @@ app.use(express.urlencoded({ extended: true})); // needs to come before everythi
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
-// Where the routes are defined 
-app.use("/", indexRouter);
+// Where the routes are defined - order matters
 app.use("/new", newMsgRouter);
+app.use("/", indexRouter);
+
 
 
 const PORT = 3000;

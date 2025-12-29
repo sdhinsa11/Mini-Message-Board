@@ -1,0 +1,26 @@
+
+<html>
+	<head> 
+	</head>
+	<body>
+		<%messages.forEach((item)=>{%>
+			<ul>
+				<li>
+					<%=item.text%>
+                </li>
+
+                <li>
+                    <%=item.user%>
+                </li>
+				
+                <li>
+                    <%=item.added%>
+                </li>
+				
+			</ul>
+            <%});%>
+	</body>
+	
+</html>
+
+ 

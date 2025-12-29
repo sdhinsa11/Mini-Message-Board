@@ -1,0 +1,25 @@
+{
+  "name": "mini-message-board",
+  "version": "1.0.0",
+  "description": "Created from the The Odin Project curriculum, implementing the MVC pattern and routing and more.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sdhinsa11/Mini-Message-Board.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/sdhinsa11/Mini-Message-Board/issues"
+  },
+  "homepage": "https://github.com/sdhinsa11/Mini-Message-Board#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.2.1"
+  }
+}

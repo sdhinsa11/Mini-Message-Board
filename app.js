@@ -15,7 +15,10 @@ import newMsgRouter from "./routes/newMessageRouter.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-//---
+
+app.use(express.urlencoded({ extended: true})); // needs to come before everything because this is how we parse it
+
+
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
@@ -23,7 +26,6 @@ app.set("view engine", "ejs");
 app.use("/", indexRouter);
 app.use("/new", newMsgRouter);
 
-app.use(express.urlencoded({ extended: true}));
 
 const PORT = 3000;
 app.listen(PORT, (error) => {

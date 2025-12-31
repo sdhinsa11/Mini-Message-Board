@@ -5,7 +5,9 @@
 		<link rel="stylesheet" href="/indexStyles.css">
 	</head>
 	<body>
-		<%messages.forEach((item)=>{%>
+		<div class="main">
+
+			<%messages.forEach((item)=>{%>
 			<ul>
 				<li>
 					<a href="/<%= item.id %>">
@@ -26,6 +28,9 @@
             <%});%>
 		
 		<a href="/new">New Message</a>
+
+
+		</div>
 	</body>
 	
 </html>

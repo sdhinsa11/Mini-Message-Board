@@ -24,10 +24,14 @@ app.set("view engine", "ejs");
 
 // https://www.geeksforgeeks.org/node-js/how-to-serve-static-content-using-node-js/
 // https://www.digitalocean.com/community/tutorials/nodejs-serving-static-files-in-express
+// https://stackoverflow.com/questions/31444095/node-js-express-static-assets-on-dynamic-routes-arent-found
 //  This is a middleware function that uses static assets and it will look for asses in the public directory root so that's why you don't need to include public in the style sheet
 //      - automatirclally makes all files inside a specified folder accessibile via HTTP 
 //      - don't need custome routes for eeahc file
 //      - don't need the "/"
+//      - static assets mean the colors or pictures or anything doesn't change unless using variable and not that the content doesn't change but the styling doesn't really change
+//      - static websites: https://www.reddit.com/r/learnprogramming/comments/9b1xnx/trying_to_understand_static_vs_dynamic_websites/
+//      - dynamic content: is content generated at request, html rendered from a template, response that depends on user data 
 app.use(express.static(path.join(__dirname, 'public'))) // the directory (path of the folder)
 
 // Where the routes are defined - order matters
@@ -46,3 +50,11 @@ app.listen(PORT, (error) => {
 
     console.log(`My Express app - listening on port ${PORT}!`)
 })
+
+
+// EJS tutorial:
+//  https://www.youtube.com/watch?v=C-VDOGhlfDA&utm_source=chatgpt.com
+// https://pieces.app/blog/serverside-rendering-with-express-and-ejs-templates?utm_source=chatgpt.com
+// https://stackoverflow.com/questions/22824171/how-can-i-use-express-and-ejs-to-serve-static-and-dynamic-content?utm_source=chatgpt.com
+
+// CSS files are static but they can be dynamic based on conditional or variables or pseudo classes but dynamic is what I have in index.ejs - the page changes based on data

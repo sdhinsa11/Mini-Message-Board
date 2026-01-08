@@ -3,7 +3,7 @@ import path, { dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 const app = express();
 
-// https://www.w3schools.com/nodejs/nodejs_modules_esm.asp - setting up module instead of commonjs in package.json
+// https://www.w3schools.com/nodejs/nodejs_modules_esm.asp - setting up module instead of commonjs in package.json so that we can import everything
 // https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c
 
 import indexRouter from "./routes/indexRouter.js";
@@ -14,7 +14,7 @@ import newMsgRouter from "./routes/newMessageRouter.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-app.use(express.urlencoded({ extended: true})); // needs to come before everything because this is how we parse it
+app.use(express.urlencoded({ extended: true})); // needs to come before everything because this is how we parse the data from the response 
 
 
 app.set("views", path.join(__dirname, "views"));
@@ -27,20 +27,17 @@ app.set("view engine", "ejs");
 // https://stackoverflow.com/questions/31444095/node-js-express-static-assets-on-dynamic-routes-arent-found
 //  This is a middleware function that uses static assets and it will look for asses in the public directory root so that's why you don't need to include public in the style sheet
 //      - automatirclally makes all files inside a specified folder accessibile via HTTP 
-//      - don't need custome routes for eeahc file
+//      - don't need custome routes for eacch file
 //      - don't need the "/"
 //      - static assets mean the colors or pictures or anything doesn't change unless using variable and not that the content doesn't change but the styling doesn't really change
 //      - static websites: https://www.reddit.com/r/learnprogramming/comments/9b1xnx/trying_to_understand_static_vs_dynamic_websites/
 //      - dynamic content: is content generated at request, html rendered from a template, response that depends on user data 
 app.use(express.static(path.join(__dirname, 'public'))) // the directory (path of the folder)
 
-// Where the routes are defined - order matters
+// Where the routes are defined - order matters (if it was / then new then it wouldn't work because it would compare "/id" to "/new")
 app.use("/new", newMsgRouter);
 app.use("/", indexRouter);
 
-
-// added stuff to package.json and to use the watch flag and changed the main to app.js and not index.js
-// using this: https://www.freecodecamp.org/learn/back-end-development-and-apis/basic-node-and-express/meet-the-node-console
 
 const PORT = 3000;
 app.listen(PORT, (error) => {
@@ -58,3 +55,6 @@ app.listen(PORT, (error) => {
 // https://stackoverflow.com/questions/22824171/how-can-i-use-express-and-ejs-to-serve-static-and-dynamic-content?utm_source=chatgpt.com
 
 // CSS files are static but they can be dynamic based on conditional or variables or pseudo classes but dynamic is what I have in index.ejs - the page changes based on data
+
+// added stuff to package.json and to use the watch flag and changed the main to app.js and not index.js
+// using this: https://www.freecodecamp.org/learn/back-end-development-and-apis/basic-node-and-express/meet-the-node-console

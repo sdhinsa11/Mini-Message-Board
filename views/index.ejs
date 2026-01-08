@@ -10,6 +10,7 @@
 			<%messages.forEach((item)=>{%>
 			<ul>
 				<li>
+					<!-- We have a link here to the item so when we click it it redirects to that link using the item id (route we set up in indexRouter) -->
 					<a href="/<%= item.id %>">
 						<%=item.text%>
 					</a>

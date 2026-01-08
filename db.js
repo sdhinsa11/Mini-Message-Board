@@ -1,4 +1,6 @@
-// db.js 
+// db.js - this would essentially be the model
+
+// any functions that relate to interacting with the database put them here 
 const messages = [
   {
     id: "123",
@@ -14,11 +16,12 @@ const messages = [
   }
 ];
 
+// finds the message using the id
 async function getMsgById(msgId){
     return messages.find(msg => msg.id === String(msgId)); // type matching 
 }
 
-// exporting the messages 
+// exporting all the messages 
 function getAllMessages() {
 	return messages;
 }

@@ -4,25 +4,33 @@
 	</head>
 	
 	<body>
-        <%-include('titleBar')%>
-        <ul>
-				<li>
-					<%=item.text%>
-                </li>
+        <div class="mainSingleMsg">
+            
+            <div class="singleMsg">
 
-                <li>
-                    <%=item.user%>
-                </li>
-				
-                <li>
-                    <%=item.added%>
-                </li>
+                <%-include('titleBar')%>
+                <ul>
+                        <li>
+                            <%=item.text%>
+                        </li>
 
-				
-		</ul>
+                        <li>
+                            <%=item.user%>
+                        </li>
+                        
+                        <li>
+                            <%=item.added%>
+                        </li>
 
-        <!-- Go back to main screen -->
-        <a href="/">go back</a>
+                        
+                </ul>
+            </div>
+        
+
+            <!-- Go back to main screen -->
+            <a href="/">go back</a>
+        
+        </div>
 		
 	</body>
 </html>

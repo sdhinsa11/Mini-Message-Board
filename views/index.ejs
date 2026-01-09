@@ -8,30 +8,32 @@
 		<%-include('titleBar')%>
 		<div class="main">
 
-			<%messages.forEach((item)=>{%>
-			<ul>
-				<li>
-					<!-- We have a link here to the item so when we click it it redirects to that link using the item id (route we set up in indexRouter) -->
-					<a href="/<%= item.id %>">
-						<%=item.text%>
-					</a>
+			<div class="allMessages">
+				<%messages.forEach((item)=>{%>
+				<ul>
+					<li>
+						<!-- We have a link here to the item so when we click it it redirects to that link using the item id (route we set up in indexRouter) -->
+						<a href="/<%= item.id %>">
+							<%=item.text%>
+						</a>
+						
+					</li>
+
+					<li>
+						<%=item.user%>
+					</li>
 					
-                </li>
-
-                <li>
-                    <%=item.user%>
-                </li>
-				
-                <li>
-                    <%=item.added%>
-                </li>
-				
-			</ul>
-            <%});%>
+					<li>
+						<%=item.added%>
+					</li>
+					
+				</ul>
+				<%});%>
+			</div>
 		
-		<a href="/new">New Message</a>
-
-
+			<div class="addMsgButton">
+				<a href="/new">New Message</a>
+			</div>
 		</div>
 	</body>
 	

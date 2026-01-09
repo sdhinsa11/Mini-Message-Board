@@ -5,18 +5,23 @@
 	<body>
 		<%-include('titleBar')%>
 		<div class="mainAddingMsg">
-			<h1>Enter a new message</h1>
+			
+			<div class="addTitle"><h1>Enter a new message</h1></div>
 			<!-- This POST method will relate too the POST call when we add the data to the messages -->
-			<form method="POST" action="/new">
-				<label>
-					<input type="text" name="users_name"/>
-					<input type="text" name="desc"/>
-				</label>
-				<button type="submit">Submit</button>
-				
-				<!-- // Add the form data to a object inside req.body - inside the POST object - need to use a middleware called express.urlencoded() to parse form data  -->
-				
-			</form>
+			<div class="addMsgForm">
+
+				<form method="POST" action="/new">
+					<label>
+						<input type="text" name="users_name"/>
+						<input type="text" name="desc"/>
+					</label>
+					<button type="submit">Submit</button>
+					<a href="/">go back</a>
+					
+					<!-- // Add the form data to a object inside req.body - inside the POST object - need to use a middleware called express.urlencoded() to parse form data  -->
+					
+				</form>
+			</div>
 		</div>
 		
 	</body>

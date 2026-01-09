@@ -10,9 +10,12 @@
 			<!-- This POST method will relate too the POST call when we add the data to the messages -->
 			<div class="addMsgForm">
 
+				<!-- https://stackoverflow.com/questions/774054/should-i-put-input-elements-inside-a-label-element -->
 				<form method="POST" action="/new">
-					<label>
+					<label>User Name:
 						<input type="text" name="users_name"/>
+					</label>
+					<label>Description:
 						<input type="text" name="desc"/>
 					</label>
 					<button type="submit">Submit</button>

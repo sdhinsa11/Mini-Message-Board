@@ -1,7 +1,8 @@
 body{
     display: flex;
-    /* justify-content: center; */
+    justify-items: center;
     background-color: #E8C2CA;
+    flex-direction: column;
 
     
 }
@@ -9,10 +10,16 @@ body{
 /* Main container styling */
 .main{
     color:#011638;
-    justify-content: center;
-    align-items: center;
 
 }
+
+/* Title bar styling */
+.title{
+    margin: 0 auto; 
+    font-size: 2rem;
+ 
+}
+
 
 /* Link styling */
 a{

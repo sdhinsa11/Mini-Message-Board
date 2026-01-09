@@ -1,15 +1,16 @@
 <html>
 	<head>
-        <link rel="stylesheet" href="/singleMsgStyles.css">
+        <link rel="stylesheet" href="/indexStyles.css">
 		
 	</head>
 	
 	<body>
-        <div class="mainSingleMsg">
+        <%-include('titleBar')%>
+        <div class="main - SingleMsg">
             
             <div class="singleMsg">
 
-                <%-include('titleBar')%>
+                
                 <ul>
                         <li>
                             <%=item.text%>

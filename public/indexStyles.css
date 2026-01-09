@@ -3,13 +3,14 @@ body{
     justify-items: center;
     background-color: #E8C2CA;
     flex-direction: column;
+    color: #011638
 
     
 }
 
 /* Main container styling */
 .main{
-    color:#011638;
+    margin: 0 auto;
 
 }
 
@@ -24,4 +25,8 @@ body{
 /* Link styling */
 a{
     color: #011638;
+    text-decoration: None;
+    border: 1px solid #011638;
+    border-radius: 20px;
+    padding: 1px;
 }

@@ -14,6 +14,13 @@ body{
 
 }
 
+/* form, single and index all have this selector same with the Main above */
+.msgs{
+    border: 3px solid #011638;
+    padding: 1rem;
+    border-radius: 20px;
+
+}
 /* Title bar styling */
 .title{
     margin: 0 auto; 
@@ -21,12 +28,58 @@ body{
  
 }
 
+/* Bullet points */
+li{
+    /* Getting rid of bullet points  */
+    list-style-type: none;
+    
+    /* Adding spaces between the points */
+    margin: 10px 0;
 
-/* Link styling */
+}
+
+/* Link navigation styling */
 a{
-    color: #011638;
+    color: #E8C2CA;
     text-decoration: None;
     border: 1px solid #011638;
     border-radius: 20px;
-    padding: 1px;
+    padding: 4px;
+    background-color: #011638 ;
+}
+
+a:hover{
+    background-color: #b392ac;
+    color: #011638;
+}
+
+
+.links{
+    padding: 1rem;
+}
+
+/* Form Styling */
+input{
+    background-color: #E8C2CA;
+    border: 1px solid #011638;
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+
+label{
+    font-weight: bolder;
+}
+
+button{
+    background-color: #011638;
+    color: #E8C2CA;
+    border: 1px solid;
+    border-radius: 20px;
+    padding: 0.5rem;
+}
+
+button:hover{
+    background-color: #b392ac;
+    color: #011638;
+
 }

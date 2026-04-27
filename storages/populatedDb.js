@@ -18,7 +18,7 @@ VALUES
 async function main() {
   console.log("seeding...");
   const client = new Client({
-    connectionString: "postgresql://sohanadhinsa:1234567@localhost:5432/minimessageboard",
+    connectionString: "postgresql://sohanadhinsa:1234567@localhost:5432/messages",
   });
   await client.connect();
   await client.query(SQL);

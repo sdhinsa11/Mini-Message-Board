@@ -11,4 +11,19 @@ async function getAllMessages() {
     const { rows } = await pool.query("SELECT * FROM messages")
 }
 
-export {getMsgById, getAllMessages};
+async function addMessage(name, desc){
+    // insert into the database
+
+    const id = uuidv4();
+    const added = new Date();
+
+    await pool.query(
+        `INSERT INTO messages (id, text, "user", added)
+                        VALUES ($1, $2, $3, $4)`,
+                        [id, desc, name, added]
+    );
+
+
+}
+
+export {getMsgById, getAllMessages, addMessage};

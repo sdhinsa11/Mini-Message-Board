@@ -1,4 +1,4 @@
-import { getAllMessages, getMsgById } from "../storages/db.js";
+import { getAllMessages, getMsgById } from "../storages/queries.js";
 
 async function displayAllMessages(req, res){
     const msgs = getAllMessages();

@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/sdhinsa11/Mini-Message-Board#readme",
   "dependencies": {
+    "dotenv": "^17.4.2",
     "ejs": "^3.1.10",
     "express": "^5.2.1",
     "pg": "^8.20.0",

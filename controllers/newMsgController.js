@@ -1,4 +1,4 @@
-import { addMessage } from "../storages/db.js";
+import { addMessage } from "../storages/queries.js";
 
 import { v4 as uuidv4 } from 'uuid';  // https://stackoverflow.com/questions/79758051/how-to-use-uuid-with-node-js-v20-when-require-throws-err-require-esm
 

@@ -1,7 +1,7 @@
 import { getAllMessages, getMsgById } from "../storages/queries.js";
 
 async function displayAllMessages(req, res){
-    const msgs = getAllMessages();
+    const msgs = await getAllMessages();
 
     res.render("index", {messages: msgs});
 

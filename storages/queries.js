@@ -1,5 +1,5 @@
-import pool from "./db.js";
-const { v4: uuidv4 } = require("uuid");
+import pool from "../storages/db.js";
+import { v4 as uuidv4 } from "uuid";
 
 // finds the message using the id
 async function getMsgById(msgId){
@@ -10,6 +10,7 @@ async function getMsgById(msgId){
 // exporting all the messages 
 async function getAllMessages() {
     const { rows } = await pool.query("SELECT * FROM messages")
+    return rows;
 }
 
 async function addMessage(name, desc){
